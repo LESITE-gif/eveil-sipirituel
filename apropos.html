@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+
+À propos | Pasteur Antonin Ahoulou
+
+</title>
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+
+}
+
+body{
+
+background:#f5f5f5;
+color:#121212;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+header{
+
+background:#111827;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+box-shadow:
+
+0 5px 20px rgba(0,0,0,.1);
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:bold;
+
+color:white;
+
+}
+
+.logo span{
+
+display:block;
+
+font-size:13px;
+
+margin-top:4px;
+
+color:#d4a24c;
+
+}
+
+nav{
+
+display:flex;
+
+gap:25px;
+
+align-items:center;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.4s;
+
+}
+
+nav a:hover,
+.active{
+
+color:#d4a24c;
+
+}
+
+.hero{
+
+padding:70px 8%;
+
+display:grid;
+
+grid-template-columns:
+
+1fr 1fr;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+.profileContainer{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+.profileCircle{
+
+width:420px;
+height:420px;
+
+border-radius:50%;
+
+padding:10px;
+
+background:
+
+linear-gradient(
+45deg,
+#d4a24c,
+#111827
+);
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.2);
+
+animation:float 4s infinite ease-in-out;
+
+}
+
+.profileCircle img{
+
+width:100%;
+height:100%;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:8px solid white;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:
+translateY(0px);
+
+}
+
+50%{
+
+transform:
+translateY(-15px);
+
+}
+
+100%{
+
+transform:
+translateY(0px);
+
+}
+
+}
+
+.heroText h1{
+
+font-size:60px;
+
+line-height:1.1;
+
+}
+
+.heroText span{
+
+color:#d4a24c;
+
+}
+
+.heroText p{
+
+margin-top:25px;
+
+line-height:1.8;
+
+font-size:18px;
+
+color:#555;
+
+}
+
+.badge{
+
+margin-top:25px;
+
+display:inline-block;
+
+padding:12px 20px;
+
+background:#111827;
+
+color:white;
+
+border-radius:40px;
+
+}
+
+.section{
+
+padding:50px 8%;
+
+}
+
+.sectionTitle{
+
+text-align:center;
+
+font-size:40px;
+
+margin-bottom:40px;
+
+}
+
+.sectionTitle span{
+
+color:#d4a24c;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:
+
+translateY(-8px);
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+color:#111827;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#666;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+}
+
+.heroText{
+
+text-align:center;
+
+}
+
+.heroText h1{
+
+font-size:42px;
+
+}
+
+.profileCircle{
+
+width:300px;
+height:300px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<div class="logo">
+
+Pasteur Antonin Ahoulou
+
+<span>
+
+Librairie Chrétienne
+
+</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">
+
+Accueil
+
+</a>
+
+<a href="livres.html">
+
+Livres
+
+</a>
+
+<a class="active"
+href="apropos.html">
+
+À propos
+
+</a>
+
+<a href="temoignages.html">
+
+Témoignages
+
+</a>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="profileContainer">
+
+<div class="profileCircle">
+
+<img
+src="auteur1.jpg">
+
+</div>
+
+</div>
+
+
+<div class="heroText">
+
+<h1>
+
+Pasteur
+
+<span>
+
+Antonin Ahoulou
+
+</span>
+
+</h1>
+
+<p>
+
+Auteur chrétien, enseignant et passionné par
+la transmission de connaissances spirituelles
+à travers des ouvrages qui édifient, inspirent
+et transforment des vies.
+
+</p>
+
+<div class="badge">
+
+Auteur • Enseignant • Visionnaire
+
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<h2 class="sectionTitle">
+
+Notre
+
+<span>
+
+Mission
+
+</span>
+
+</h2>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+📖 Édifier les vies
+
+</h3>
+
+<p>
+
+Partager des ouvrages chrétiens inspirants qui
+transforment les pensées et rapprochent les
+lecteurs de Dieu.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+
+🌍 Impacter les nations
+
+</h3>
+
+<p>
+
+Transmettre une vision capable d'influencer
+positivement des familles, des jeunes et des
+communautés entières.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+
+🙏 Encourager la foi
+
+</h3>
+
+<p>
+
+Accompagner chaque lecteur dans son parcours
+spirituel grâce à des enseignements pratiques
+et inspirants.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="section">
+
+<h2 class="sectionTitle">
+
+Vision &
+
+<span>
+
+Valeurs
+
+</span>
+
+</h2>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+Vision
+
+</h3>
+
+<p>
+
+Créer une génération profondément enracinée
+dans les principes bibliques et capable
+d'impacter son environnement.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+Valeurs
+
+</h3>
+
+<p>
+
+Foi • Excellence • Intégrité • Amour • Service
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+Engagement
+
+</h3>
+
+<p>
+
+Continuer à produire des contenus qui apportent
+la lumière, la sagesse et l'espérance.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="section">
+
+<h2 class="sectionTitle">
+
+Quelques
+
+<span>
+
+Statistiques
+
+</span>
+
+</h2>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3 id="livresCount">
+
+0
+
+</h3>
+
+<p>
+
+Livres publiés
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3 id="lecteursCount">
+
+0
+
+</h3>
+
+<p>
+
+Lecteurs touchés
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 id="paysCount">
+
+0
+
+</h3>
+
+<p>
+
+Pays atteints
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="section">
+
+<h2 class="sectionTitle">
+
+Parcours du
+
+<span>
+
+Ministère
+
+</span>
+
+</h2>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+2018
+
+</h3>
+
+<p>
+
+Début de la mission d'évangélisation
+et de transmission des enseignements.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+
+2021
+
+</h3>
+
+<p>
+
+Développement des ouvrages
+et expansion de la vision.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+
+Aujourd'hui
+
+</h3>
+
+<p>
+
+Une communauté grandissante
+de lecteurs et de personnes impactées.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<div class="card"
+style="text-align:center;background:#111827;color:white;">
+
+<h2
+style="color:#d4a24c;margin-bottom:20px;">
+
+Citation
+
+</h2>
+
+<p
+style="font-size:20px;line-height:1.8;">
+
+"Nous croyons que chaque vie peut être transformée
+par une parole inspirée, une pensée renouvelée
+et une foi vivante."
+
+</p>
+
+<br>
+
+<h3>
+
+— Pasteur Antonin Ahoulou
+
+</h3>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+function animateCounter(
+id,
+target,
+speed
+){
+
+let value=0;
+
+const element=
+
+document.getElementById(id);
+
+const timer=
+
+setInterval(()=>{
+
+value++;
+
+element.innerText=value+"+";
+
+if(value>=target){
+
+clearInterval(timer);
+
+}
+
+},speed);
+
+}
+
+
+animateCounter(
+
+"livresCount",
+15,
+80
+
+);
+
+
+animateCounter(
+
+"lecteursCount",
+120,
+25
+
+);
+
+
+animateCounter(
+
+"paysCount",
+8,
+150
+
+);
+
+
+
+const cards=
+
+document.querySelectorAll(
+".card"
+);
+
+
+const observer=
+
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(
+
+(entry)=>{
+
+if(
+
+entry.isIntersecting
+
+){
+
+entry.target.style.opacity=1;
+
+entry.target.style.transform=
+
+"translateY(0px)";
+
+}
+
+}
+
+)
+
+}
+
+);
+
+
+cards.forEach(card=>{
+
+card.style.opacity=0;
+
+card.style.transform=
+
+"translateY(50px)";
+
+card.style.transition=
+
+".8s";
+
+observer.observe(card);
+
+});
+
+</script>
+
+</body>
+
+</html>

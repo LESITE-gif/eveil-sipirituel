@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Pasteur Antonin Ahoulou</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Montserrat',sans-serif;
+
+background:
+linear-gradient(
+180deg,
+#050505,
+#001447,
+#003cff,
+#050505
+);
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+
+radial-gradient(
+circle at center,
+rgba(0,60,255,.18),
+transparent 60%
+);
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:22px 50px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(15px);
+
+z-index:99999;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+
+gap:12px;
+
+font-size:28px;
+font-weight:900;
+
+}
+
+.cross{
+
+font-size:35px;
+
+color:#ffcc00;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:35px;
+
+align-items:center;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+.menu a:hover{
+
+color:#ffcc00;
+
+}
+
+.whatsapp{
+
+padding:14px 25px;
+
+background:#ffcc00;
+
+border-radius:12px;
+
+text-decoration:none;
+
+font-weight:700;
+
+color:black;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.05);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<span class="cross">
+
+✝
+
+</span>
+
+Pasteur Antonin Ahoulou
+
+</div>
+
+<div class="menu">
+
+<a href="index.html">Accueil</a>
+
+<a href="livres.html">Livres</a>
+
+<a href="apropos.html">À propos</a>
+
+<a href="temoignages.html">Témoignages</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="#" class="whatsapp">
+
+Rejoindre sur WhatsApp
+
+</a>
+
+</div>
+
+</nav>
+<section class="slider">
+
+<!-- SLIDE 1 -->
+
+<div class="slide active">
+
+<div class="left-content">
+
+<div class="mini-title">
+
+NOUVEAU
+
+</div>
+
+<h1>
+
+LIVRE<br>
+
+<span>DISPONIBLE</span>
+
+</h1>
+
+<p>
+
+Découvrez mon nouveau livre qui va transformer votre manière de voir le combat spirituel et votre destinée.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="livres.html" class="btn-yellow">
+
+📖 Découvrir maintenant
+
+</a>
+
+<a href="apropos.html" class="btn-glass">
+
+✨ En savoir plus
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SLIDE 2 -->
+
+<div class="slide">
+
+<div class="left-pasteur">
+
+<img src="pasteur.png">
+
+</div>
+
+<div class="right-spiritual">
+
+<div class="mini-title">
+
+ÉVEIL SPIRITUEL
+
+</div>
+
+<h1>
+
+Éveil Spirituel,<br>
+
+Combat Réel,<br>
+
+<span>Fruit Visible</span>
+
+</h1>
+
+<p>
+
+Découvrez les ouvrages du Pasteur Antonin Ahoulou pour grandir dans votre marche avec Christ.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="livres.html" class="btn-yellow">
+
+📚 Découvrir les livres
+
+</a>
+
+<a href="contact.html" class="btn-glass">
+
+💬 Rejoindre sur WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="prev">
+
+❮
+
+</div>
+
+<div class="next">
+
+❯
+
+</div>
+
+
+<div class="dots">
+
+<span class="dot active-dot"></span>
+
+<span class="dot"></span>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* SLIDER */
+
+.slider{
+
+position:relative;
+
+height:150vh;
+
+overflow:hidden;
+
+}
+
+.slide{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+padding:120px 8%;
+
+opacity:0;
+
+transform:translateX(40px);
+
+transition:1s;
+
+}
+
+.slide.active{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+
+/* slide 1 */
+
+.slide:first-child{
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.2),
+rgba(0,0,0,.45)
+),
+
+url("slide1-bg.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+}
+
+
+/* slide2 */
+
+.slide:nth-child(2){
+
+background:
+
+linear-gradient(
+120deg,
+#050505,
+#001447,
+#003cff,
+#050505
+);
+
+}
+
+
+.left-content{
+
+width:45%;
+
+z-index:5;
+
+}
+
+.mini-title{
+
+font-size:28px;
+
+font-weight:700;
+
+letter-spacing:5px;
+
+color:#ffcc00;
+
+margin-bottom:20px;
+
+}
+
+.left-content h1,
+.right-spiritual h1{
+
+font-size:90px;
+
+font-weight:900;
+
+line-height:.9;
+
+}
+
+.left-content span,
+.right-spiritual span{
+
+color:#ffcc00;
+
+}
+
+.left-content p,
+.right-spiritual p{
+
+margin-top:25px;
+
+font-size:20px;
+
+line-height:1.7;
+
+max-width:600px;
+
+color:#e6e6e6;
+
+}
+
+
+/* bouton */
+
+.hero-buttons{
+
+margin-top:40px;
+
+display:flex;
+
+gap:20px;
+
+}
+
+.btn-yellow{
+
+padding:18px 35px;
+
+background:#ffcc00;
+
+border-radius:14px;
+
+font-weight:700;
+
+text-decoration:none;
+
+color:black;
+
+box-shadow:
+0 0 30px rgba(255,204,0,.5);
+
+transition:.4s;
+
+}
+
+.btn-yellow:hover{
+
+transform:
+translateY(-5px)
+scale(1.05);
+
+}
+
+.btn-glass{
+
+padding:18px 35px;
+
+border-radius:14px;
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,.2);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:700;
+
+transition:.4s;
+
+}
+
+.btn-glass:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+/* pasteur */
+
+.left-pasteur{
+
+width:45%;
+
+display:flex;
+justify-content:center;
+
+}
+
+.left-pasteur img{
+
+height:650px;
+
+opacity:.5;
+
+}
+
+.right-spiritual{
+
+width:45%;
+
+}
+
+
+/* fleches */
+
+.prev,.next{
+
+position:absolute;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:55px;
+height:55px;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.1);
+
+cursor:pointer;
+
+font-size:25px;
+
+z-index:999;
+
+}
+
+.prev{
+
+left:30px;
+
+}
+
+.next{
+
+right:30px;
+
+}
+
+
+/* points */
+
+.dots{
+
+position:absolute;
+
+bottom:30px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+display:flex;
+
+gap:12px;
+
+}
+
+.dot{
+
+width:14px;
+height:14px;
+
+border-radius:50%;
+
+background:#777;
+
+cursor:pointer;
+
+}
+
+.active-dot{
+
+background:#ffcc00;
+
+}
+
+@media(max-width:900px){
+
+.slide{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.left-content,
+.right-spiritual{
+
+width:100%;
+
+}
+
+.left-content h1,
+.right-spiritual h1{
+
+font-size:55px;
+
+}
+
+.left-pasteur img{
+
+height:350px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+}
+
+</style>
+<script>
+
+const slides=document.querySelectorAll(".slide");
+
+const dots=document.querySelectorAll(".dot");
+
+const next=document.querySelector(".next");
+
+const prev=document.querySelector(".prev");
+
+let current=0;
+
+
+/* afficher slide */
+
+function showSlide(index){
+
+slides.forEach(slide=>{
+
+slide.classList.remove("active");
+
+});
+
+dots.forEach(dot=>{
+
+dot.classList.remove("active-dot");
+
+});
+
+slides[index].classList.add("active");
+
+dots[index].classList.add("active-dot");
+
+}
+
+
+/* suivant */
+
+next.addEventListener("click",()=>{
+
+current++;
+
+if(current>=slides.length){
+
+current=0;
+
+}
+
+showSlide(current);
+
+resetAuto();
+
+});
+
+
+/* précédent */
+
+prev.addEventListener("click",()=>{
+
+current--;
+
+if(current<0){
+
+current=slides.length-1;
+
+}
+
+showSlide(current);
+
+resetAuto();
+
+});
+
+
+/* points */
+
+dots.forEach((dot,index)=>{
+
+dot.addEventListener("click",()=>{
+
+current=index;
+
+showSlide(current);
+
+resetAuto();
+
+});
+
+});
+
+
+/* autoplay */
+
+let autoplay=setInterval(()=>{
+
+current++;
+
+if(current>=slides.length){
+
+current=0;
+
+}
+
+showSlide(current);
+
+},5000);
+
+
+/* redémarrer après clic */
+
+function resetAuto(){
+
+clearInterval(autoplay);
+
+autoplay=setInterval(()=>{
+
+current++;
+
+if(current>=slides.length){
+
+current=0;
+
+}
+
+showSlide(current);
+
+},5000);
+
+}
+
+</script>
+<section class="books-section">
+
+<div class="section-header">
+
+<h2>
+
+Nos Livres
+
+</h2>
+
+<p>
+
+Découvrez les ouvrages disponibles pour votre croissance spirituelle.
+
+</p>
+
+</div>
+
+
+<div class="books-grid">
+
+
+<!-- Livre 1 -->
+
+<div class="book-card">
+
+<img src="livre1.png">
+
+<h3>
+
+Vous devez porter du fruit pour Dieu
+
+</h3>
+
+<p>
+
+Développez une vie spirituelle solide et fructueuse grâce à cet ouvrage inspirant.
+
+</p>
+
+<div class="price">
+
+5000 FCFA
+
+</div>
+
+<a href="achat.html">
+
+Acheter
+
+</a>
+
+</div>
+
+
+
+<!-- Livre 2 -->
+
+<div class="book-card">
+
+<img src="livre2.png">
+
+<h3>
+
+Ouvre mes yeux Seigneur ! Le Combat Est Réel
+
+</h3>
+
+<p>
+
+Comprenez les réalités invisibles et développez votre discernement spirituel.
+
+</p>
+
+<div class="price">
+
+5000 FCFA
+
+</div>
+
+<a href="achat.html">
+
+Acheter
+
+</a>
+
+</div>
+
+
+
+<!-- Livre 3 -->
+
+<div class="book-card">
+
+<img src="livre3.png">
+
+<h3>
+
+Et ces autres enfants : Comment les accompagner ?
+
+</h3>
+
+<p>
+
+Un guide pratique et spirituel pour accompagner les enfants avec sagesse.
+
+</p>
+
+<div class="price">
+
+5000 FCFA
+
+</div>
+
+<a href="achat.html">
+
+Acheter
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+.books-section{
+
+padding:130px 8%;
+
+}
+
+.section-header{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-header h2{
+
+font-size:65px;
+
+font-weight:900;
+
+margin-bottom:15px;
+
+}
+
+.section-header p{
+
+font-size:18px;
+
+color:#d4d4d4;
+
+}
+
+
+.books-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+}
+
+
+/* cartes */
+
+.book-card{
+
+padding:30px;
+
+border-radius:25px;
+
+background:
+
+rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.3);
+
+text-align:center;
+
+transition:.5s;
+
+}
+
+.book-card:hover{
+
+transform:
+
+translateY(-15px)
+scale(1.03);
+
+box-shadow:
+
+0 20px 50px rgba(0,60,255,.4);
+
+}
+
+.book-card img{
+
+width:220px;
+
+height:300px;
+
+object-fit:cover;
+
+margin-bottom:25px;
+
+filter:
+
+drop-shadow(
+0 20px 30px rgba(0,0,0,.5)
+);
+
+}
+
+.book-card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.book-card p{
+
+line-height:1.7;
+
+color:#d4d4d4;
+
+margin-bottom:25px;
+
+}
+
+.price{
+
+font-size:30px;
+
+font-weight:900;
+
+color:#ffcc00;
+
+margin-bottom:25px;
+
+}
+
+.book-card a{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#ffcc00;
+
+border-radius:14px;
+
+color:black;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.book-card a:hover{
+
+transform:scale(1.05);
+
+box-shadow:
+
+0 0 30px rgba(255,204,0,.5);
+
+}
+
+
+/* responsive */
+
+@media(max-width:900px){
+
+.books-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(min-width:901px) and (max-width:1200px){
+
+.books-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+</style>
+<section class="testimonials-section">
+
+<div class="section-header">
+
+<h2>
+
+Témoignages
+
+</h2>
+
+<p>
+
+Découvrez comment Dieu agit dans la vie des personnes.
+
+</p>
+
+</div>
+
+
+<div class="testimonials-grid">
+
+
+<div class="testimonial-card">
+
+<img src="avatar1.png">
+
+<h3>
+
+Marie K.
+
+</h3>
+
+<span>
+
+12 Mai 2026
+
+</span>
+
+<p>
+
+Ce livre a transformé ma compréhension du combat spirituel et renforcé ma foi.
+
+</p>
+
+</div>
+
+
+
+<div class="testimonial-card">
+
+<img src="avatar2.png">
+
+<h3>
+
+Jean P.
+
+</h3>
+
+<span>
+
+28 Avril 2026
+
+</span>
+
+<p>
+
+Les enseignements m'ont aidé à discerner certaines situations de ma vie.
+
+</p>
+
+</div>
+
+
+
+<div class="testimonial-card">
+
+<img src="avatar3.png">
+
+<h3>
+
+Sarah M.
+
+</h3>
+
+<span>
+
+03 Mai 2026
+
+</span>
+
+<p>
+
+Une lecture puissante qui m'a rapprochée davantage de Dieu.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="see-more">
+
+<a href="temoignages.html">
+
+Voir tous les témoignages
+
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div class="footer-column">
+
+<h2>
+
+✝ Pasteur Antonin Ahoulou
+
+</h2>
+
+<p>
+
+Grandir spirituellement, vivre pleinement et porter du fruit pour Dieu.
+
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>
+
+Liens rapides
+
+</h3>
+
+<a href="index.html">Accueil</a>
+
+<a href="livres.html">Livres</a>
+
+<a href="apropos.html">À propos</a>
+
+<a href="temoignages.html">Témoignages</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+
+<div class="footer-column">
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>
+
++225 XX XX XX XX XX
+
+</p>
+
+<p>
+
+contact@email.com
+
+</p>
+
+<p>
+
+Abidjan, Côte d'Ivoire
+
+</p>
+
+</div>
+
+
+
+<div class="footer-column">
+
+<h3>
+
+Réseaux
+
+</h3>
+
+<a href="#">Facebook</a>
+
+<a href="#">WhatsApp</a>
+
+<a href="#">YouTube</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Pasteur Antonin Ahoulou — Tous droits réservés
+
+</div>
+
+</footer>
+
+
+
+<a href="admin.html" class="admin-button">
+
+Admin
+
+</a>
+
+
+
+<style>
+
+/* témoignages */
+
+.testimonials-section{
+
+padding:120px 8%;
+
+}
+
+.testimonials-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.testimonial-card{
+
+padding:35px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.08);
+
+text-align:center;
+
+transition:.5s;
+
+}
+
+.testimonial-card:hover{
+
+transform:
+translateY(-10px);
+
+}
+
+.testimonial-card img{
+
+width:90px;
+height:90px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:3px solid #ffcc00;
+
+margin-bottom:20px;
+
+}
+
+.testimonial-card span{
+
+display:block;
+
+margin:10px 0;
+
+color:#ffcc00;
+
+}
+
+.see-more{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:60px;
+
+}
+
+.see-more a{
+
+padding:16px 35px;
+
+background:#ffcc00;
+
+color:black;
+
+text-decoration:none;
+
+border-radius:14px;
+
+font-weight:700;
+
+}
+
+
+/* footer */
+
+footer{
+
+padding:100px 8% 30px;
+
+margin-top:120px;
+
+background:#050505;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:
+
+2fr
+1fr
+1fr
+1fr;
+
+gap:40px;
+
+}
+
+.footer-column{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.footer-column h3{
+
+margin-bottom:25px;
+
+color:#ffcc00;
+
+}
+
+.footer-column a{
+
+color:#d4d4d4;
+
+margin-bottom:10px;
+
+text-decoration:none;
+
+}
+
+.footer-column a:hover{
+
+color:#ffcc00;
+
+}
+
+.copyright{
+
+margin-top:50px;
+
+padding-top:30px;
+
+border-top:
+
+1px solid rgba(255,255,255,.08);
+
+text-align:center;
+
+color:#999;
+
+}
+
+
+/* admin */
+
+.admin-button{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+padding:10px 18px;
+
+border-radius:30px;
+
+background:rgba(0,0,0,.5);
+
+backdrop-filter:blur(10px);
+
+text-decoration:none;
+
+color:white;
+
+opacity:.7;
+
+}
+
+.admin-button:hover{
+
+opacity:1;
+
+}
+
+
+/* responsive */
+
+@media(max-width:900px){
+
+.testimonials-grid,
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+}
+
+</style>
+
+
+</body>
+</html>

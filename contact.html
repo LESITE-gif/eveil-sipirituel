@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Contact | Pasteur Antonin Ahoulou
+
+</title>
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+
+}
+
+body{
+
+background:#111827;
+color:white;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+header{
+
+background:#111827;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+border-bottom:
+
+1px solid rgba(255,255,255,.1);
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:bold;
+
+}
+
+.logo span{
+
+display:block;
+
+font-size:13px;
+
+margin-top:4px;
+
+color:#d4a24c;
+
+}
+
+nav{
+
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.4s;
+
+}
+
+nav a:hover,
+.active{
+
+color:#d4a24c;
+
+}
+
+.buyBtn{
+
+padding:14px 22px;
+
+background:transparent;
+
+border:2px solid #d4a24c;
+
+border-radius:15px;
+
+color:#d4a24c;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.buyBtn:hover{
+
+background:#d4a24c;
+
+color:white;
+
+transform:translateY(-4px);
+
+}
+
+.hero{
+
+padding:70px 8%;
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+align-items:center;
+
+gap:40px;
+
+}
+
+.heroText h1{
+
+font-size:70px;
+
+line-height:1.1;
+
+}
+
+.heroText span{
+
+color:#d4a24c;
+
+}
+
+.heroText p{
+
+margin-top:25px;
+
+line-height:1.8;
+
+font-size:18px;
+
+opacity:.9;
+
+}
+
+.heroImage{
+
+height:400px;
+
+border-radius:30px;
+
+background:
+
+linear-gradient(
+
+rgba(0,0,0,.3),
+
+rgba(0,0,0,.3)
+
+),
+
+url("https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1200");
+
+background-size:cover;
+
+background-position:center;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.3);
+
+}
+
+.section{
+
+padding:30px 8%;
+
+}
+
+.section h2{
+
+text-align:center;
+
+font-size:40px;
+
+margin-bottom:30px;
+
+}
+
+.section h2::after{
+
+content:"";
+
+display:block;
+
+width:80px;
+
+height:4px;
+
+background:#d4a24c;
+
+margin:10px auto;
+
+border-radius:10px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:
+
+linear-gradient(
+
+145deg,
+
+#162032,
+
+#111827
+
+);
+
+padding:30px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.2);
+
+transition:.4s;
+
+border:
+
+1px solid rgba(212,162,76,.2);
+
+}
+
+.card:hover{
+
+transform:
+
+translateY(-8px);
+
+}
+
+.card h3{
+
+margin:15px 0;
+
+font-size:30px;
+
+color:#d4a24c;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+}
+
+.card button{
+
+margin-top:20px;
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:15px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+background:#d4a24c;
+
+color:white;
+
+transition:.4s;
+
+}
+
+.card button:hover{
+
+transform:translateY(-4px);
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+}
+
+.heroText h1{
+
+font-size:45px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+Pasteur Antonin Ahoulou
+
+<span>
+
+Librairie Chrétienne
+
+</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">
+
+Accueil
+
+</a>
+
+<a href="livres.html">
+
+Livres
+
+</a>
+
+<a href="apropos.html">
+
+À propos
+
+</a>
+
+<a href="temoignages.html">
+
+Témoignages
+
+</a>
+
+<a
+class="active"
+href="contact.html">
+
+Contact
+
+</a>
+
+<button
+class="buyBtn"
+onclick="window.location.href='acheter.html'">
+
+Acheter un livre
+
+</button>
+
+</nav>
+
+</header>
+<section class="hero">
+
+<div class="heroText">
+
+<h1>
+
+Contactez-
+
+<span>
+
+nous
+
+</span>
+
+</h1>
+
+<p>
+
+Nous sommes disponibles pour vous accompagner,
+répondre à vos questions et vous orienter dans votre parcours.
+
+</p>
+
+</div>
+
+<div class="heroImage">
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<h2>
+
+Nos moyens de contact
+
+</h2>
+
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+WhatsApp
+
+</h3>
+
+<p>
+
++241 XX XX XX XX
+
+</p>
+
+<p>
+
+Disponible :
+8h–18h
+
+</p>
+
+<button
+onclick="openWhatsapp()">
+
+Discuter avec nous
+
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+Téléphone
+
+</h3>
+
+<p>
+
++241 XX XX XX XX
+
+</p>
+
+<button
+onclick="callNow()">
+
+Appeler maintenant
+
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+📍 Localisation
+
+</h3>
+
+<p>
+
+Libreville, Gabon
+
+</p>
+
+<button
+onclick="openMap()">
+
+Voir sur la carte
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="section">
+
+<h2>
+
+Suivez-nous
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+Facebook
+
+</h3>
+
+<p>
+
+Pasteur Antonin Ahoulou
+
+</p>
+
+<p>
+
+Suivez nos publications
+et actualités.
+
+</p>
+
+<button
+onclick="facebook()">
+
+Visiter Facebook
+
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+YouTube
+
+</h3>
+
+<p>
+
+Pasteur Antonin Ahoulou TV
+
+</p>
+
+<p>
+
+Retrouvez nos enseignements
+et vidéos.
+
+</p>
+
+<button
+onclick="youtube()">
+
+Visiter YouTube
+
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+TikTok
+
+</h3>
+
+<p>
+
+@pasteurantoninahoulou
+
+</p>
+
+<p>
+
+Courtes vidéos inspirantes
+
+</p>
+
+<button
+onclick="tiktok()">
+
+Visiter TikTok
+
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+
+Instagram
+
+</h3>
+
+<p>
+
+@pasteurantoninahoulou
+
+</p>
+
+<p>
+
+Moments et contenus quotidiens
+
+</p>
+
+<button
+onclick="instagram()">
+
+Visiter Instagram
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="section">
+
+<h2>
+
+Nos horaires
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Lundi</h3>
+<p>8h–18h</p>
+
+</div>
+
+<div class="card">
+
+<h3>Mardi</h3>
+<p>8h–18h</p>
+
+</div>
+
+<div class="card">
+
+<h3>Mercredi</h3>
+<p>8h–18h</p>
+
+</div>
+
+<div class="card">
+
+<h3>Jeudi</h3>
+<p>8h–18h</p>
+
+</div>
+
+<div class="card">
+
+<h3>Vendredi</h3>
+<p>8h–18h</p>
+
+</div>
+
+<div class="card">
+
+<h3>Samedi</h3>
+<p>9h–15h</p>
+
+</div>
+
+<div class="card">
+
+<h3>Dimanche</h3>
+<p>Fermé</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section
+class="section">
+
+<div class="card">
+
+<h3>
+
+“Nous sommes heureux de vous accompagner à travers des ouvrages qui édifient et transforment les vies.”
+
+</h3>
+
+</div>
+
+</section>
+<script>
+
+function openWhatsapp(){
+
+window.open(
+
+"https://wa.me/24107972238"
+
+);
+
+}
+
+
+function callNow(){
+
+window.location.href=
+
+"tel:+24107972238";
+
+}
+
+
+function openMap(){
+
+window.location.href=
+
+"map2.html";
+
+}
+
+
+function facebook(){
+
+window.open(
+
+"https://facebook.com"
+
+);
+
+}
+
+
+function youtube(){
+
+window.open(
+
+"https://youtube.com"
+
+);
+
+}
+
+
+function tiktok(){
+
+window.open(
+
+"https://tiktok.com"
+
+);
+
+}
+
+
+function instagram(){
+
+window.open(
+
+"https://instagram.com"
+
+);
+
+}
+
+
+
+/* Animation légère au scroll */
+
+const cards=
+
+document.querySelectorAll(
+".card"
+);
+
+
+const observer=
+
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(
+
+(entry)=>{
+
+if(
+
+entry.isIntersecting
+
+){
+
+entry.target.style.opacity=1;
+
+entry.target.style.transform=
+
+"translateY(0px)";
+
+}
+
+}
+
+)
+
+}
+
+);
+
+
+cards.forEach(card=>{
+
+card.style.opacity=0;
+
+card.style.transform=
+
+"translateY(50px)";
+
+card.style.transition=
+
+".8s";
+
+observer.observe(card);
+
+});
+
+</script>
+
+</body>
+
+</html>
