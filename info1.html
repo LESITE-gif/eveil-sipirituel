@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vous devez porter du fruit pour Dieu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+:root{
+--blue:#06142C;
+--blue2:#081B3A;
+--gold:#D4A93A;
+--light:#f5f5f5;
+--text:#111827;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--light);
+overflow-x:hidden;
+color:var(--text);
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(6,20,44,.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:white;
+font-weight:700;
+}
+
+.logo i{
+color:var(--gold);
+font-size:24px;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+padding-top:140px;
+padding-bottom:80px;
+background:
+linear-gradient(
+135deg,
+var(--blue),
+var(--blue2)
+);
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:420px 1fr;
+gap:60px;
+align-items:center;
+}
+
+.book-image{
+text-align:center;
+}
+
+.book-image img{
+width:100%;
+max-width:380px;
+border-radius:30px;
+box-shadow:
+0 30px 60px rgba(0,0,0,.35);
+}
+
+.book-panel{
+position:relative;
+background:white;
+padding:45px;
+border-radius:35px;
+overflow:hidden;
+box-shadow:
+0 25px 60px rgba(0,0,0,.12);
+}
+
+.book-panel::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:8px;
+background:linear-gradient(
+90deg,
+var(--gold),
+#f4d67a
+);
+}
+
+.book-panel span{
+color:var(--gold);
+font-weight:700;
+letter-spacing:2px;
+}
+
+.book-panel h1{
+font-family:'Montserrat',sans-serif;
+margin-top:15px;
+margin-bottom:20px;
+font-size:42px;
+line-height:1.2;
+color:var(--blue);
+}
+
+.book-panel p{
+line-height:1.9;
+color:#555;
+font-size:16px;
+}
+
+.info-box{
+margin-top:30px;
+padding:25px;
+border-radius:25px;
+background:
+linear-gradient(
+135deg,
+#fafafa,
+#f0f0f0
+);
+border-left:6px solid var(--gold);
+}
+
+.info-box h3{
+font-family:'Montserrat';
+margin-bottom:10px;
+color:var(--blue);
+}
+
+.back-btn{
+display:inline-flex;
+align-items:center;
+gap:10px;
+margin-top:35px;
+padding:15px 25px;
+background:var(--gold);
+color:black;
+font-weight:700;
+text-decoration:none;
+border-radius:15px;
+transition:.3s;
+}
+
+.back-btn:hover{
+transform:translateY(-3px);
+}
+
+/* SECTION BONUS */
+
+.details{
+padding:80px 0;
+}
+
+.details-card{
+background:white;
+padding:40px;
+border-radius:35px;
+box-shadow:
+0 20px 50px rgba(0,0,0,.08);
+}
+
+.details-card h2{
+font-family:'Montserrat';
+color:var(--blue);
+margin-bottom:20px;
+}
+
+.details-card p{
+line-height:2;
+color:#555;
+}
+
+/* FOOTER */
+
+footer{
+background:#020B18;
+padding:60px;
+text-align:center;
+color:white;
+}
+
+footer h3{
+font-family:'Montserrat';
+margin-bottom:15px;
+}
+
+/* TABLETTE */
+
+@media(max-width:1024px){
+
+.hero-content{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.book-image img{
+max-width:300px;
+}
+
+.book-panel h1{
+font-size:34px;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.navbar{
+padding:15px;
+flex-wrap:wrap;
+gap:15px;
+}
+
+nav{
+width:100%;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+}
+
+.hero{
+padding-top:180px;
+}
+
+.book-panel{
+padding:30px;
+}
+
+.book-panel h1{
+font-size:28px;
+}
+
+.book-image img{
+max-width:260px;
+}
+
+.details-card{
+padding:25px;
+}
+
+footer{
+padding:40px 20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-cross"></i>
+<span>Pasteur Antonin Ahoulou</span>
+</div>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="livres.html">Livres</a>
+<a href="apropos.html">À propos</a>
+<a href="temoignage.html">Témoignages</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="book-image">
+<img src="livre01.png" alt="Vous devez porter du fruit pour Dieu">
+</div>
+
+<div class="book-panel">
+
+<span>LIVRE SPIRITUEL</span>
+
+<h1>
+VOUS DEVEZ PORTER DU FRUIT POUR DIEU
+</h1>
+
+<p>
+
+Insérez ici la présentation principale du livre.
+Expliquez son objectif, les enseignements qu'il contient,
+les bénédictions qu'il peut apporter au lecteur et pourquoi
+ce livre est important pour la croissance spirituelle.
+
+</p>
+
+<div class="info-box">
+
+<h3>À propos de ce livre</h3>
+
+<p>
+
+Ajoutez ici un résumé plus détaillé,
+les thèmes abordés, les témoignages,
+ou tout autre contenu concernant uniquement cet ouvrage.
+
+</p>
+
+</div>
+
+<a href="livres.html" class="back-btn">
+<i class="fa-solid fa-arrow-left"></i>
+Retour aux livres
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="details">
+
+<div class="container">
+
+<div class="details-card">
+
+<h2>Informations complémentaires</h2>
+
+<p>
+
+Cette zone peut contenir une description plus approfondie,
+des extraits, des recommandations, des versets clés ou
+tout autre contenu que vous souhaitez mettre en valeur.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Pasteur Antonin Ahoulou</h3>
+
+<p>© 2026 Tous droits réservés</p>
+
+</footer>
+
+</body>
+</html>
