@@ -4,45 +4,69 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-name="viewport"
-content="width=device-width,initial-scale=1">
+<title>Achat de livres | Pasteur Antonin Ahoulou</title>
 
-<title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-Acheter Livre | Pasteur Antonin Ahoulou
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
 
-*{
+:root{
 
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+--blue:#06142C;
+--blue2:#081B3A;
+--gold:#D4A93A;
+--light:#F5F5F5;
+--white:#FFFFFF;
+--text:#111827;
+--success:#16a34a;
+--warning:#f59e0b;
+--danger:#dc2626;
 
 }
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 html{
-
 scroll-behavior:smooth;
-
 }
 
 body{
 
-background:#f5f5f5;
-color:#121212;
+font-family:'Poppins',sans-serif;
+background:var(--light);
+color:var(--text);
+overflow-x:hidden;
 
 }
 
+.container{
+
+width:92%;
+max-width:1400px;
+margin:auto;
+
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
 header{
 
-background:#0a193a;
-padding:18px 8%;
+background:rgba(6,20,44,.97);
+
+padding:18px 5%;
 
 display:flex;
 justify-content:space-between;
@@ -50,357 +74,288 @@ align-items:center;
 
 position:sticky;
 top:0;
+
 z-index:1000;
 
-box-shadow:
-0 10px 25px rgba(0,0,0,.1);
+backdrop-filter:blur(12px);
 
 }
 
 .logo{
 
-font-size:22px;
-font-weight:bold;
-color:#fff;
+display:flex;
+align-items:center;
+gap:10px;
+
+color:white;
+font-weight:700;
 
 }
 
-.logo span{
+.logo i{
 
-display:block;
-font-size:13px;
-color:#d4a24c;
-margin-top:4px;
+color:var(--gold);
+font-size:24px;
 
 }
 
 nav{
 
 display:flex;
-gap:25px;
+gap:30px;
 
 }
 
 nav a{
 
-text-decoration:none;
 color:white;
-transition:.4s;
+text-decoration:none;
+transition:.3s;
 
 }
 
-nav a:hover,
-.active{
+nav a:hover{
 
-color:#d4a24c;
+color:var(--gold);
 
 }
 
-.container{
+/* ========================= */
+/* HERO */
+/* ========================= */
 
-padding:40px 8%;
+.hero{
+
+background:
+linear-gradient(
+135deg,
+var(--blue),
+var(--blue2)
+);
+
+padding:80px 0;
+
+color:white;
+
+}
+
+.hero h1{
+
+font-size:55px;
+font-family:'Montserrat',sans-serif;
+margin-bottom:15px;
+
+}
+
+.hero p{
+
+max-width:700px;
+line-height:1.9;
+
+opacity:.9;
+
+}
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+.main-grid{
 
 display:grid;
-grid-template-columns:1fr 1fr;
+
+grid-template-columns:
+380px 1fr;
 
 gap:30px;
 
+padding:50px 0;
+
 }
 
-.card{
+/* ========================= */
+/* LIVRES */
+/* ========================= */
+
+.books-panel{
 
 background:white;
-padding:30px;
 
-border-radius:18px;
+padding:25px;
 
-box-shadow:
-0 15px 35px rgba(0,0,0,.08);
-
-animation:fade .8s;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-.mainImage{
-
-width:100%;
-height:500px;
-
-object-fit:cover;
-
-border-radius:18px;
-
-padding:10px;
-
-background:#081a3f;
-
-transition:.5s;
+border-radius:30px;
 
 box-shadow:
+0 15px 40px rgba(0,0,0,.08);
 
-0 15px 35px rgba(0,0,0,.1);
-
-}
-
-.mainImage:hover{
-
-transform:scale(1.02);
+height:fit-content;
 
 }
 
-.thumbContainer{
+.books-panel h2{
+
+font-family:'Montserrat';
+margin-bottom:20px;
+color:var(--blue);
+
+}
+
+.book-card{
 
 display:flex;
+gap:15px;
 
-gap:10px;
+padding:15px;
 
-margin-top:20px;
+border-radius:20px;
 
-overflow:auto;
-
-}
-
-.thumb{
-
-width:85px;
-height:85px;
-
-object-fit:cover;
-
-border-radius:15px;
+margin-bottom:15px;
 
 cursor:pointer;
 
-border:3px solid transparent;
+border:2px solid transparent;
 
-transition:.4s;
-
-}
-
-.thumb:hover{
-
-transform:scale(1.08);
-
-border-color:#d4a24c;
+transition:.3s;
 
 }
 
-.bookTitle{
+.book-card:hover{
 
-margin-top:20px;
+transform:translateY(-3px);
 
-font-size:28px;
-
-}
-
-.price{
-
-font-size:30px;
-font-weight:bold;
-
-color:#d4a24c;
-
-margin-top:10px;
+border-color:var(--gold);
 
 }
 
-.stars{
+.book-card.active{
 
-margin-top:10px;
-color:gold;
+border-color:var(--gold);
 
-}
-
-.status{
-
-margin-top:10px;
-font-weight:bold;
-
-color:green;
+background:#fffdf6;
 
 }
 
-.delivery{
+.book-card img{
 
-margin-top:10px;
+width:80px;
+height:110px;
 
-color:#555;
+object-fit:cover;
 
-}
-
-.description{
-
-margin-top:20px;
-line-height:1.8;
+border-radius:12px;
 
 }
 
-input,
-select{
+.book-info h3{
+
+font-size:15px;
+margin-bottom:8px;
+
+}
+
+.book-info span{
+
+font-weight:700;
+color:var(--gold);
+
+}
+
+/* ========================= */
+/* ZONE DROITE */
+/* ========================= */
+
+.content-panel{
+
+display:flex;
+flex-direction:column;
+gap:25px;
+
+}
+
+/* ========================= */
+/* AUTH */
+/* ========================= */
+
+.auth-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.auth-card h2{
+
+font-family:'Montserrat';
+margin-bottom:15px;
+color:var(--blue);
+
+}
+
+.auth-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+
+}
+
+input{
 
 width:100%;
 
 padding:15px;
 
-margin-top:12px;
-
-border-radius:14px;
+border-radius:15px;
 
 border:1px solid #ddd;
 
 outline:none;
 
-}
-
-input:focus,
-select:focus{
-
-border-color:#d4a24c;
-
-box-shadow:
-0 0 10px rgba(212,162,76,.3);
+font-size:15px;
 
 }
 
-.quantity{
+input:focus{
 
-display:flex;
-align-items:center;
-gap:15px;
-
-margin-top:20px;
+border-color:var(--gold);
 
 }
 
-.qbtn{
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
 
-width:42px;
-height:42px;
+@media(max-width:1024px){
 
-border:none;
+.main-grid{
 
-border-radius:50%;
-
-background:#071d4d;
-
-color:white;
-
-font-size:20px;
-
-cursor:pointer;
-
-transition:.4s;
+grid-template-columns:1fr;
 
 }
 
-.qbtn:hover{
+}
 
-background:#d4a24c;
-transform:scale(1.1);
+@media(max-width:768px){
+
+.hero{
+
+padding:60px 0;
 
 }
 
-#qty{
+.hero h1{
 
-font-size:24px;
-font-weight:bold;
-
-}
-
-.summary{
-
-margin-top:25px;
-
-padding:20px;
-
-border-radius:18px;
-
-background:#031335;
-
-color:white;
+font-size:34px;
 
 }
 
-.summary div{
-
-margin-top:10px;
-
-}
-
-.commander{
-
-width:100%;
-
-padding:16px;
-
-margin-top:25px;
-
-border:none;
-
-border-radius:15px;
-
-background:#d4a24c;
-
-color:white;
-
-font-size:18px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-transition:.4s;
-
-}
-
-.commander:hover{
-
-transform:translateY(-4px);
-
-}
-
-.pending{
-
-color:orange;
-font-weight:bold;
-
-}
-
-.valid{
-
-color:green;
-font-weight:bold;
-
-}
-
-.refused{
-
-color:red;
-font-weight:bold;
-
-}
-
-@media(max-width:900px){
-
-.container{
+.auth-grid{
 
 grid-template-columns:1fr;
 
@@ -411,6 +366,211 @@ nav{
 display:none;
 
 }
+
+}
+.action-btn{
+
+padding:14px 20px;
+
+border:none;
+
+border-radius:15px;
+
+background:var(--gold);
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.action-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.secondary-btn{
+
+background:var(--blue);
+
+color:white;
+
+}
+
+.logout-btn{
+
+background:#dc2626;
+
+color:white;
+
+}
+
+.user-box{
+
+margin-top:15px;
+
+padding:15px;
+
+background:#f8fafc;
+
+border-radius:15px;
+
+font-weight:600;
+
+}
+
+.qty-box{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+margin-top:10px;
+
+}
+
+.qty-box button{
+
+width:45px;
+height:45px;
+
+border:none;
+
+border-radius:50%;
+
+background:var(--blue);
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+}
+
+.summary-card,
+.orders-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.summary-card h2,
+.orders-card h2{
+
+font-family:'Montserrat';
+
+margin-bottom:20px;
+
+color:var(--blue);
+
+}
+
+.summary-line{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:15px;
+
+}
+
+.total{
+
+padding-top:15px;
+
+border-top:1px solid #eee;
+
+font-size:20px;
+
+}
+
+.commander-btn{
+
+width:100%;
+
+margin-top:20px;
+
+padding:16px;
+
+border:none;
+
+border-radius:18px;
+
+background:var(--gold);
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+.order-item{
+
+padding:15px;
+
+border-radius:18px;
+
+background:#f8fafc;
+
+margin-bottom:15px;
+
+}
+
+.status-pending{
+
+color:#f59e0b;
+
+font-weight:700;
+
+}
+
+.status-valid{
+
+color:#16a34a;
+
+font-weight:700;
+
+}
+
+.status-refused{
+
+color:#dc2626;
+
+font-weight:700;
+
+}
+
+.delete-order{
+
+margin-top:10px;
+
+padding:10px 15px;
+
+border:none;
+
+border-radius:12px;
+
+background:#dc2626;
+
+color:white;
+
+cursor:pointer;
 
 }
 
@@ -424,135 +584,158 @@ display:none;
 
 <div class="logo">
 
-Pasteur Antonin Ahoulou
+<i class="fa-solid fa-cross"></i>
 
-<span>
-
-Librairie Chrétienne
-
-</span>
+<span>Pasteur Antonin Ahoulou</span>
 
 </div>
 
 <nav>
 
-<a href="accueil.html">
-Accueil
-</a>
-
-<a href="livres.html">
-Livres
-</a>
-
-<a href="apropos.html">
-À propos
-</a>
-
-<a href="temoignages.html">
-Témoignages
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-<a class="active">
-
-Acheter
-
-</a>
+<a href="index.html">Accueil</a>
+<a href="livres.html">Livres</a>
+<a href="apropos.html">À propos</a>
+<a href="temoignages.html">Témoignages</a>
+<a href="contact.html">Contact</a>
 
 </nav>
 
 </header>
+
+<section class="hero">
+
 <div class="container">
 
-<div class="card">
+<h1>
 
-<img
-id="mainImage"
-class="mainImage"
-src="images/livre1.jpg">
+Commander vos livres
 
-<div
-class="thumbContainer"
-id="thumbs">
+</h1>
 
-<img
-src="livre1.png"
-class="thumb"
-data-id="livre1">
+<p>
 
-<img
-src="livre2.png"
-class="thumb"
-data-id="livre2">
+Choisissez un ou plusieurs ouvrages,
+créez votre compte en quelques secondes
+et suivez l'évolution de vos commandes
+en temps réel.
 
-<img
-src="livre3.png"
-class="thumb"
-data-id="livre3">
+</p>
 
 </div>
 
-<h2
-class="bookTitle"
-id="titre">
+</section>
 
-Ouvre mes yeux Seigneur
+<div class="container">
 
-</h2>
+<div class="main-grid">
 
-<div
-class="price"
-id="prix">
+<!-- COLONNE LIVRES -->
 
-5000 FCFA
+<div class="books-panel">
 
-</div>
+<h2>Nos Livres</h2>
 
-<div
-class="stars"
-id="etoiles">
+<div class="book-card active" data-book="livre1">
 
-★★★★★
+<img src="livre1.png">
 
-</div>
+<div class="book-info">
 
-<div
-class="status"
-id="disponibilite">
+<h3>Seigneur Ouvre Mes Yeux !</h3>
 
-Disponible
-
-</div>
-
-<div class="delivery">
-
-Livraison estimée :
-24h à 72h
-
-</div>
-
-<div
-class="description"
-id="description">
-
-Recueil chrétien sur l'éveil spirituel et la foi.
+<span>6500 FCFA</span>
 
 </div>
 
 </div>
 
+<div class="book-card" data-book="livre2">
+
+<img src="livre2.png">
+
+<div class="book-info">
+
+<h3>Vous devez porter du fruit pour Dieu</h3>
+
+<span>5500 FCFA</span>
+
+</div>
+
+</div>
+
+<div class="book-card" data-book="livre3">
+
+<img src="livre3.png">
+
+<div class="book-info">
+
+<h3>Et ces autres enfants ?</h3>
+
+<span>5500 FCFA</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- COLONNE DROITE -->
+
+<div class="content-panel">
+
+<div class="auth-card">
+
+<h2>Connexion / Inscription</h2>
+
+<div class="auth-grid">
+
+<input
+type="email"
+id="email"
+placeholder="Adresse email">
+
+<input
+type="password"
+id="password"
+placeholder="Mot de passe">
+
+</div>
+<div style="margin-top:20px;display:flex;gap:15px;flex-wrap:wrap;">
+
+<button id="registerBtn" class="action-btn">
+
+Créer un compte
+
+</button>
+
+<button id="loginBtn" class="action-btn secondary-btn">
+
+Se connecter
+
+</button>
+
+<button id="logoutBtn" class="action-btn logout-btn">
+
+Se déconnecter
+
+</button>
+
+</div>
+
+<div id="userBox" class="user-box">
+
+Aucun utilisateur connecté
+
+</div>
+
+</div>
 
 
-<div class="card">
+<!-- FORMULAIRE COMMANDE -->
 
-<h2>
+<div class="auth-card">
 
-Informations client
-
-</h2>
+<h2>Informations de commande</h2>
 
 <input
 id="nom"
@@ -560,93 +743,37 @@ placeholder="Nom">
 
 <input
 id="prenom"
-placeholder="Prénom">
-
-<select
-id="pays">
-
-<option>
-🇬🇦 +241 Gabon
-</option>
-
-<option>
-🇨🇲 +237 Cameroun
-</option>
-
-<option>
-🇨🇮 +225 Côte d'Ivoire
-</option>
-
-<option>
-🇨🇬 +242 Congo
-</option>
-
-<option>
-🇫🇷 +33 France
-</option>
-
-</select>
+placeholder="Prénom"
+style="margin-top:15px;">
 
 <input
 id="telephone"
-placeholder="Téléphone">
+placeholder="Téléphone"
+style="margin-top:15px;">
 
-<input
-id="quartier"
-placeholder="Quartier">
+<div style="margin-top:20px;">
 
+<label style="font-weight:600;">
 
-<label
-style="margin-top:15px;display:block;font-weight:bold;">
-
-Quel livre voulez-vous acheter ?
+Quantité
 
 </label>
 
-<select
-id="livreSelect">
+<div class="qty-box">
 
-<option value="livre1">
-
-Ouvre mes yeux Seigneur
-
-</option>
-
-<option value="livre2">
-
-Vous devez porter du fruit pour Dieu
-
-</option>
-
-<option value="livre3">
-
-Et ces autres enfants ?
-
-</option>
-
-</select>
-
-
-<div class="quantity">
-
-<button
-class="qbtn"
-id="minus">
+<button id="minusBtn">
 
 -
 
 </button>
 
-<div
-id="qty">
+<span id="qty">
 
 1
 
-</div>
+</span>
 
-<button
-class="qbtn"
-id="plus">
+<button id="plusBtn">
 
 +
 
@@ -654,165 +781,93 @@ id="plus">
 
 </div>
 
-
-<div class="summary">
-
-<h3>
-
-Résumé commande
-
-</h3>
-
-<div>
-
-Livre :
-<span id="rLivre">
-
-Ouvre mes yeux Seigneur
-
-</span>
-
-</div>
-
-<div>
-
-Prix :
-<span id="rPrix">
-
-5000
-
-</span>
-
-FCFA
-
-</div>
-
-<div>
-
-Quantité :
-<span id="rQty">
-
-1
-
-</span>
-
-</div>
-
-<div>
-
-Prix total :
-<span id="rTotal">
-
-5000
-
-</span>
-
-FCFA
-
-</div>
-
-<div>
-
-Date :
-<span id="rDate">
-
-</span>
-
 </div>
 
 </div>
 
 
-<button
-class="commander"
-id="commanderBtn">
+<!-- RESUME -->
 
-Commander
+<div class="summary-card">
 
-</button>
+<h2>Résumé de votre commande</h2>
 
+<div class="summary-line">
 
+<span>Livre</span>
 
-<div class="orders">
+<b id="resumeLivre">
 
-<h2>
-
-Mes commandes
-
-</h2>
-
-<div
-id="statusCommande"
-class="pending">
-
-En attente
-
-</div>
-
-<div
-id="mesCommandes">
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div
-class="modal"
-id="modal">
-
-<div
-class="modal-content">
-
-<h2>
-
-Commande enregistrée
-
-</h2>
-
-<br>
-
-<p>
-
-Statut :
-<b>
-
-En attente de validation
+Seigneur Ouvre Mes Yeux !
 
 </b>
 
-</p>
+</div>
 
-<br>
+<div class="summary-line">
 
-<p>
+<span>Prix unitaire</span>
 
-Votre commande a été envoyée au propriétaire.
+<b id="resumePrix">
 
-</p>
+6500 FCFA
 
-<br>
+</b>
 
-<button
-class="ok"
-onclick="closeModal()">
+</div>
 
-OK
+<div class="summary-line">
+
+<span>Quantité</span>
+
+<b id="resumeQty">
+
+1
+
+</b>
+
+</div>
+
+<div class="summary-line total">
+
+<span>Total</span>
+
+<b id="resumeTotal">
+
+6500 FCFA
+
+</b>
+
+</div>
+
+<button id="commanderBtn" class="commander-btn">
+
+Passer commande
 
 </button>
 
-<button
-class="see"
-onclick="gotoOrders()">
+</div>
 
-Voir mes commandes
 
-</button>
+<!-- COMMANDES -->
+
+<div class="orders-card">
+
+<h2>Mes commandes</h2>
+
+<div id="ordersList">
+
+<p style="opacity:.7;">
+
+Aucune commande pour le moment
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -820,21 +875,30 @@ Voir mes commandes
 <script type="module">
 
 import { initializeApp }
-from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 
 import {
+getAuth,
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+signOut,
+onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
+import {
 getFirestore,
 collection,
 addDoc,
+deleteDoc,
+doc,
+query,
+where,
 onSnapshot
-
 }
+from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
-
-
-const firebaseConfig={
+const firebaseConfig = {
 
 apiKey:"AIzaSyApK7qLdTEyJ-nUICEBwyAsDU9QMSdhLEY",
 authDomain:"eveil-spirituel-f5020.firebaseapp.com",
@@ -847,276 +911,74 @@ measurementId:"G-7B1PPFGZYR"
 
 };
 
+const app = initializeApp(firebaseConfig);
 
-const app=
-initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-const db=
-getFirestore(app);
+const db = getFirestore(app);
 
+const livres = {
 
-const livres=[
-
-{
-
-id:"livre1",
-
-titre:
-"Ouvre mes yeux Seigneur",
-
-prix:5000,
-
-description:
-"Recueil chrétien sur l'éveil spirituel.",
-
-image:
-"livre1.png",
-
-etoiles:5,
-
-disponibilite:true
-
+livre1:{
+titre:"Seigneur Ouvre Mes Yeux !",
+prix:6500
 },
 
-{
-
-id:"livre2",
-
-titre:
-"Vous devez porter du fruit pour Dieu",
-
-prix:5000,
-
-description:
-"Croissance spirituelle et développement chrétien.",
-
-image:
-"livre2.png",
-
-etoiles:5,
-
-disponibilite:true
-
+livre2:{
+titre:"Vous devez porter du fruit pour Dieu",
+prix:5500
 },
 
-{
-
-id:"livre3",
-
-titre:
-"Et ces autres enfants ?",
-
-prix:5000,
-
-description:
-"Guide chrétien familial.",
-
-image:
-"livre3.png",
-
-etoiles:5,
-
-disponibilite:true
-
+livre3:{
+titre:"Et ces autres enfants ?",
+prix:5500
 }
 
-];
+};
 
+let livreActuel = "livre1";
 
-const commandeRef=
-collection(
-db,
-"commandes"
+let quantite = 1;
+
+const cards =
+document.querySelectorAll(".book-card");
+
+cards.forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+cards.forEach(c=>
+c.classList.remove("active")
 );
 
+card.classList.add("active");
 
-let qty=1;
-
-let current=
-livres[0];
-
-
-const mainImage=
-document.getElementById(
-"mainImage"
-);
-
-const titre=
-document.getElementById(
-"titre"
-);
-
-const prix=
-document.getElementById(
-"prix"
-);
-
-const description=
-document.getElementById(
-"description"
-);
-
-const livreSelect=
-document.getElementById(
-"livreSelect"
-);
-
-const qtyElement=
-document.getElementById(
-"qty"
-);
-
-const rLivre=
-document.getElementById(
-"rLivre"
-);
-
-const rPrix=
-document.getElementById(
-"rPrix"
-);
-
-const rQty=
-document.getElementById(
-"rQty"
-);
-
-const rTotal=
-document.getElementById(
-"rTotal"
-);
-
-const rDate=
-document.getElementById(
-"rDate"
-);
-
-const mesCommandes=
-document.getElementById(
-"mesCommandes"
-);
-
-
-
-function updateBook(id){
-
-current=
-
-livres.find(
-x=>x.id===id
-);
-
-
-mainImage.src=
-current.image;
-
-
-titre.innerText=
-current.titre;
-
-
-prix.innerText=
-
-current.prix+
-" FCFA";
-
-
-description.innerText=
-
-current.description;
-
+livreActuel=
+card.dataset.book;
 
 updateResume();
-
-}
-
-
-function updateResume(){
-
-let total=
-
-current.prix*qty;
-
-
-rLivre.innerText=
-current.titre;
-
-
-rPrix.innerText=
-current.prix;
-
-
-rQty.innerText=
-qty;
-
-
-rTotal.innerText=
-total;
-
-
-rDate.innerText=
-
-new Date()
-
-.toLocaleDateString();
-
-}
-
-
-livreSelect.onchange=()=>{
-
-updateBook(
-
-livreSelect.value
-
-);
-
-};
-
-
-
-document
-.querySelectorAll(
-".thumb"
-)
-
-.forEach(img=>{
-
-img.onclick=()=>{
-
-livreSelect.value=
-
-img.dataset.id;
-
-updateBook(
-img.dataset.id
-);
-
-};
 
 });
 
+});
 
-plus.onclick=()=>{
+plusBtn.onclick=()=>{
 
-qty++;
+quantite++;
 
-qtyElement.innerText=
-qty;
+qty.innerText=quantite;
 
 updateResume();
 
 };
 
+minusBtn.onclick=()=>{
 
-minus.onclick=()=>{
+if(quantite>1){
 
-if(qty>1){
+quantite--;
 
-qty--;
-
-qtyElement.innerText=
-qty;
+qty.innerText=quantite;
 
 updateResume();
 
@@ -1124,46 +986,252 @@ updateResume();
 
 };
 
+function updateResume(){
 
+const livre=
+livres[livreActuel];
 
-commanderBtn.onclick=
+resumeLivre.innerText=
+livre.titre;
 
-async()=>{
+resumePrix.innerText=
+livre.prix+" FCFA";
 
+resumeQty.innerText=
+quantite;
+
+resumeTotal.innerText=
+(livre.prix*quantite)+" FCFA";
+
+}
+
+updateResume();
+/* ========================= */
+/* AUTHENTIFICATION */
+/* ========================= */
+
+registerBtn.onclick = async()=>{
+
+const emailValue =
+email.value.trim();
+
+const passwordValue =
+password.value.trim();
 
 if(
-
-nom.value=="" ||
-
-prenom.value=="" ||
-
-telephone.value=="" ||
-
-quartier.value==""
-
+emailValue==="" ||
+passwordValue===""
 ){
 
 alert(
-
-"Veuillez remplir tous les champs"
-
+"Veuillez saisir votre email et votre mot de passe."
 );
 
 return;
 
 }
 
+try{
 
-let total=
+await createUserWithEmailAndPassword(
 
-current.prix*qty;
+auth,
+emailValue,
+passwordValue
 
+);
+
+alert(
+"Compte créé avec succès."
+);
+
+}
+catch(error){
+
+alert(
+error.message
+);
+
+}
+
+};
+
+
+
+loginBtn.onclick = async()=>{
+
+const emailValue =
+email.value.trim();
+
+const passwordValue =
+password.value.trim();
+
+if(
+emailValue==="" ||
+passwordValue===""
+){
+
+alert(
+"Veuillez saisir votre email et votre mot de passe."
+);
+
+return;
+
+}
+
+try{
+
+await signInWithEmailAndPassword(
+
+auth,
+emailValue,
+passwordValue
+
+);
+
+alert(
+"Connexion réussie."
+);
+
+}
+catch(error){
+
+alert(
+error.message
+);
+
+}
+
+};
+
+
+
+logoutBtn.onclick = async()=>{
+
+try{
+
+await signOut(auth);
+
+alert(
+"Déconnexion réussie."
+);
+
+}
+catch(error){
+
+alert(
+error.message
+);
+
+}
+
+};
+
+
+
+onAuthStateChanged(
+
+auth,
+
+(user)=>{
+
+if(user){
+
+userBox.innerHTML =
+
+`
+✅ Connecté :
+
+<br><br>
+
+<b>
+${user.email}
+</b>
+`;
+
+}
+else{
+
+userBox.innerHTML =
+
+`
+❌ Aucun utilisateur connecté
+`;
+
+ordersList.innerHTML =
+
+`
+<p style="opacity:.7;">
+Connectez-vous pour voir vos commandes
+</p>
+`;
+
+}
+
+}
+
+);
+
+
+/* ========================= */
+/* COLLECTION COMMANDES */
+/* ========================= */
+
+const commandesRef =
+collection(
+db,
+"commandes"
+);
+/* ========================= */
+/* PASSER COMMANDE */
+/* ========================= */
+
+commanderBtn.onclick = async()=>{
+
+const user =
+auth.currentUser;
+
+if(!user){
+
+alert(
+"Veuillez vous connecter avant de commander."
+);
+
+return;
+
+}
+
+if(
+nom.value.trim()==="" ||
+prenom.value.trim()==="" ||
+telephone.value.trim()===""
+){
+
+alert(
+"Veuillez remplir tous les champs."
+);
+
+return;
+
+}
+
+const livre =
+livres[livreActuel];
+
+const total =
+livre.prix * quantite;
+
+try{
 
 await addDoc(
 
-commandeRef,
+commandesRef,
 
 {
+
+uid:user.uid,
+
+email:user.email,
 
 nom:nom.value,
 
@@ -1171,195 +1239,180 @@ prenom:prenom.value,
 
 telephone:telephone.value,
 
-quartier:quartier.value,
+livre:livre.titre,
 
-livre:current.titre,
+prix:livre.prix,
 
-quantite:qty,
+quantite:quantite,
 
-prixTotal:total,
+total:total,
 
-date:
+date:new Date().toLocaleString(),
 
-new Date()
-
-.toLocaleString(),
-
-statut:
-
-"En attente"
+statut:"En attente"
 
 }
 
 );
 
-
-modal.style.display=
-"flex";
-
-
-let message=
-
-`Nouvelle commande 📚
-
-Nom :
-${nom.value}
-
-Prénom :
-${prenom.value}
-
-Téléphone :
-${telephone.value}
-
-Quartier :
-${quartier.value}
-
-Livre :
-${current.titre}
-
-Quantité :
-${qty}
-
-Prix total :
-${total}
-
-`;
-
-
-window.open(
-
-`https://wa.me/24107972238?text=${encodeURIComponent(message)}`
-
+alert(
+"Commande enregistrée avec succès."
 );
-
 
 nom.value="";
 prenom.value="";
 telephone.value="";
-quartier.value="";
 
-qty=1;
+quantite=1;
 
-qtyElement.innerText=1;
+qty.innerText=1;
 
 updateResume();
 
+}
+catch(error){
+
+alert(
+error.message
+);
+
+}
+
 };
 
 
 
-window.closeModal=()=>{
+/* ========================= */
+/* AFFICHAGE COMMANDES */
+/* ========================= */
 
-modal.style.display=
-"none";
+onAuthStateChanged(
 
-};
+auth,
 
+(user)=>{
 
-window.gotoOrders=()=>{
+if(!user) return;
 
-document
-.querySelector(
-".orders"
+const q = query(
+commandesRef,
+where(
+"uid",
+"==",
+user.uid
 )
-
-.scrollIntoView({
-
-behavior:
-"smooth"
-
-});
-
-closeModal();
-
-};
-
-
+);
 
 onSnapshot(
 
-commandeRef,
+q,
 
 (snapshot)=>{
 
-mesCommandes.innerHTML="";
+ordersList.innerHTML="";
 
+if(snapshot.empty){
 
-snapshot.forEach(doc=>{
+ordersList.innerHTML=
 
-let d=
-doc.data();
+`
+<p style="opacity:.7;">
+Aucune commande enregistrée
+</p>
+`;
 
-let color=
-"pending";
-
-
-if(
-
-d.statut==
-"Commande validée"
-
-){
-
-color=
-"valid";
+return;
 
 }
 
+snapshot.forEach(documento=>{
+
+const data=
+documento.data();
+
+const id=
+documento.id;
+
+let statutClass=
+"status-pending";
 
 if(
-
-d.statut==
-"Commande refusée"
-
+data.statut==="Validée"
 ){
 
-color=
-"refused";
+statutClass=
+"status-valid";
 
 }
 
+if(
+data.statut==="Refusée"
+){
 
-document
-.getElementById(
-"statusCommande"
-)
+statutClass=
+"status-refused";
 
-.innerHTML=
+}
 
-`<span class="${color}">
-${d.statut}
-</span>`;
+ordersList.innerHTML +=
 
+`
 
-mesCommandes.innerHTML+=`
-
-<div class="orderItem">
+<div class="order-item">
 
 <h3>
 
-${d.livre}
+📚 ${data.livre}
 
 </h3>
 
 <p>
 
-${d.date}
+${data.date}
 
 </p>
 
 <p>
 
-${d.prixTotal}
-FCFA
+Quantité :
+${data.quantite}
 
 </p>
 
-<p class="${color}">
+<p>
 
-${d.statut}
+Total :
+${data.total} FCFA
 
 </p>
+
+<p class="${statutClass}">
+
+${data.statut}
+
+</p>
+
+${
+data.statut==="En attente"
+?
+
+`
+
+<button
+class="delete-order"
+onclick="supprimerCommande('${id}')">
+
+Supprimer
+
+</button>
+
+`
+
+:
+
+""
+
+}
 
 </div>
 
@@ -1369,9 +1422,51 @@ ${d.statut}
 
 });
 
+}
 
-updateResume();
+);
 
+
+
+/* ========================= */
+/* SUPPRIMER COMMANDE */
+/* ========================= */
+
+window.supprimerCommande =
+async(id)=>{
+
+if(
+!confirm(
+"Supprimer cette commande ?"
+)
+){
+
+return;
+
+}
+
+try{
+
+await deleteDoc(
+
+doc(
+db,
+"commandes",
+id
+)
+
+);
+
+}
+catch(error){
+
+alert(
+error.message
+);
+
+}
+
+};
 </script>
 
 </body>
